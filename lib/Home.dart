@@ -20,6 +20,7 @@ class _HomeState extends State<Home> {
       body: Container(
         padding: EdgeInsets.all(32),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
             Padding(
               padding: EdgeInsets.only(bottom: 32),
@@ -27,7 +28,13 @@ class _HomeState extends State<Home> {
             ),
             Padding(
               padding: EdgeInsets.only(bottom: 10),
-              child: Text("Saiba qual a melhor opção para abastecer seu veículo."),
+              child: Text(
+                "Saiba qual a melhor opção para abastecer seu veículo.",
+                style: TextStyle(
+                  fontSize: 25,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
             ),
             TextField(
               keyboardType: TextInputType.number,
@@ -52,16 +59,28 @@ class _HomeState extends State<Home> {
             Padding(
               padding: EdgeInsets.only(top: 10),
               child: RaisedButton(
+                color: Colors.blue,
+                textColor: Colors.white,
+                padding: EdgeInsets.all(15),
                 child: Text(
                   "Calcular",
                   style: TextStyle(
-                    fontSize: 25,
-                    fontWeight: FontWeight.bold,
+                    fontSize: 20,
                   ),
                 ),
                 onPressed: (){},
               ),
             ),
+            Padding(
+              padding: EdgeInsets.only(top: 20),
+              child: Text(
+                "Resultado",
+                style: TextStyle(
+                  fontSize: 22,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            )
           ],
         ),
       ),
