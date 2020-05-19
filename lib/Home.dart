@@ -6,7 +6,6 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-
   TextEditingController _controllerAlcool = TextEditingController();
   TextEditingController _controllerGasolina = TextEditingController();
 
@@ -18,6 +17,7 @@ class _HomeState extends State<Home> {
         backgroundColor: Colors.blue,
       ),
       body: Container(
+        child: SingleChildScrollView(
         padding: EdgeInsets.all(32),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -68,7 +68,7 @@ class _HomeState extends State<Home> {
                     fontSize: 20,
                   ),
                 ),
-                onPressed: (){},
+                onPressed: () {},
               ),
             ),
             Padding(
@@ -83,7 +83,7 @@ class _HomeState extends State<Home> {
             )
           ],
         ),
-      ),
+      )),
     );
   }
 }
